@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <title>Graphics Balloons Shop</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <hr />
+    <h2 class="title-c-section">1000-CENTER</h2>
+    <hr />
+    <div class="inline">
+      <h2 >Add JPG photos</h2>
+      <input type="file" id="jpgFileInput" accept="image/jpeg" multiple />
+    </div>
+    <div class="img-container" id="jpgImageContainer"></div>
+    <div class="bttns-change">
+    <button id="changeJPGButton" disabled>Change JPG Pictures</button>
+    <button id="downloadJPGButton" disabled>Download All JPG</button>
+    </div>
+    <hr />
+    <div class="inline">
+      <h2>Add PNG photos</h2>
+      <input type="file" id="pngFileInput" accept="image/png" multiple />
+    </div>
+    <div class="img-container" id="pngImageContainer"></div>
+    <div class="bttns-change">
+      <button id="changePNGButton" disabled>Change PNG Pictures</button>
+      <button id="downloadPNGButton" disabled>Download All PNG</button>
+    </div>
+  
+    <hr />
+    <h2 class="watermark title-c-section">WATERMARK</h2>
+    <hr />
+    <div class="inline">
+      <h2>Add photos</h2>
+      <input type="file" id="imageUploader" accept="image/*" multiple />
+    </div>
+    <div id="imageGallery"></div>
+    <div class="inline">
+      <h2>Add watermark</h2>
+      <input type="file" id="watermarkUploader" accept="image/png" />
+    </div>
+
+    <button id="addWatermarkButton" disabled>Add Watermark</button>
+    <button id="changePicturesButton" disabled>Change Pictures</button>
+    <button id="downloadAllButton" disabled>Download All</button>
+
+
+    <div class="add-shadow">
+      <hr />
+      <h2 class="title-c-section">Add custom shadow</h2>
+      <!-- <input type="file" id="file-input" accept=".png" multiple />
+      <button id="upload-button">Upload PNG Images</button>
+      <button id="add-stylization">Add Stylization</button> -->
+      <div class="drop-shadow">
+        <div>
+        <div>
+          <input type="file" id="file-input" accept=".png" multiple />
+          <button id="upload-button">Upload PNG Images</button>
+        </div>
+        <div class="properties">
+          <div>
+            <label for="horizontal-offset">Horizontal Offset:</label>
+            <input type="number" id="horizontal-offset" value="0">
+          </div>
+          <div>
+            <label for="vertical-offset">Vertical Offset:</label>
+            <input type="number" id="vertical-offset" value="-3">
+          </div>
+          <div>
+            <label for="blur-radius">Blur Radius:</label>
+            <input type="number" id="blur-radius" value="2">
+          </div>
+        </div>
+        <div class="action-shadow">
+          <button id="add-stylization" disabled>Add Stylization</button>
+          <button id="download-zip-button" disabled>Download All as ZIP</button>
+          <button id="preview-shadow">Preview Shadow</button>
+        </div>
+      </div>
+      <div class="preview">
+        <canvas id="preview-canvas" style="display: none;"></canvas>
+      </div>
+    </div>
+    <div class="output-container">
+      <h3>Output Images</h3>
+      <div id="image-container">
+      </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
